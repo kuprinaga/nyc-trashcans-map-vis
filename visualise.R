@@ -12,15 +12,9 @@ names(df) %<>% make_names()
 
 tag.map.title <- tags$style(HTML("
   .leaflet-control.map-title { 
-    transform: translate(-50%,20%);
-    position: fixed !important;
-    left: 50%;
-    text-align: center;
-    padding-left: 10px; 
-    padding-right: 10px; 
-    background: rgba(255,255,255,0.9);
+   background: rgba(255,255,255,0.9);
     font-weight: bold;
-    font-size: 22px;
+    font-size: 30px;
   }
 "))
 
@@ -48,6 +42,6 @@ m <- leaflet() %>%
 
 saveWidget(m, "map.html", selfcontained = FALSE)
 
-mapshot(m, file = "Rplot.png",
+webshot("map.html", file = "Rplot.png",
         cliprect = "viewport")
 
