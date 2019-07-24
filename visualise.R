@@ -12,7 +12,9 @@ names(df) %<>% make_names()
 
 tag.map.title <- tags$style(HTML("
   .leaflet-control.map-title { 
-   background: rgba(255,255,255,0.9);
+    position: fixed !important;
+    left: 10%;
+    background: rgba(255,255,255,0.9);
     font-weight: bold;
     font-size: 30px;
   }
